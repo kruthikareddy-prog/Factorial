@@ -1,32 +1,19 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main() {
+    int num;
+    unsigned long long fact = 1LL;
 
-# Precompiled Headers
-*.gch
-*.pch
+    // Input number from user
+    printf("Enter any number to calculate factorial: ");
+    scanf("%d", &num);
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    // Calculate factorial
+    for (int i = 1; i <= num; i++) {
+        fact *= i;
+    }
 
-# Fortran module files
-*.mod
-*.smod
+    printf("Factorial of %d = %llu\n", num, fact);
+    return 0;
+}
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
